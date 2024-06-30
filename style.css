@@ -1,0 +1,150 @@
+/* NAVBAR */
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+
+body {
+    margin:0;
+}
+
+.navbar {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 25px 0 25px 0;
+}
+
+.navbar img {
+  max-height: 60px;
+  filter: invert(1);
+}
+
+/* LANDING AREA */
+
+.landing {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    max-height: 800px;
+    overflow: hidden;
+  }
+
+  .hero-area {
+    position: absolute;
+    max-width: 800px;
+    margin: 40px 0 0 5%;
+    background-color: rgba(255,255,255,0.9);
+    backdrop-filter: blur(6px);
+    z-index: 2;
+    text-align: center;
+    text-wrap: wrap;
+    padding: 20px 30px 20px 30px;
+    filter: drop-shadow(4px 4px 6px black);
+  }
+
+  .hero-area h1 {
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .hero-area p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+.hero-area h3 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+}
+
+#top-contact-container {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-stack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+  }
+
+.contact-icon {
+    height: 55px;
+    margin-right: 25px;
+  }
+
+  .contact-text {
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+  }
+
+.section-title {
+    width:100%;
+    text-align: center;
+}
+
+.section-title p {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+  /* BACKGROUND COLLAGE */
+  .column {
+    flex: 25%;
+    padding: 0 4px;
+    z-index: -1;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 5%;
+  background-color: #0a0a0a;
+  color: white;
+  align-items: center;
+}
+
+.footer-element {
+  flex: 50%;
+}
+
+.footer-element img {
+  max-height: 75px;
+  filter: invert(1);
+}
+
+#bottom-contact-container {
+ float: right;
+}
+
+.bottom img {
+  height: 40px;
+}
+
+.bottom h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
