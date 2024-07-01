@@ -319,3 +319,64 @@ body {
     height: 30px;
   }
 }
+
+/* Animation */
+
+.hover::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.hover:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hover::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsl(0, 0%, 7%);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+.hover:hover {
+  color: white;
+  transition: color .3s ease;
+}
+
+.hover {
+  position: relative;
+  min-block-size: 100%;
+  min-inline-size: 100%;
+}
+
+html {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}
+
+.fadeIn {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
