@@ -1,3 +1,8 @@
+html {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
 /* NAVBAR */
 * {
     box-sizing: border-box;
@@ -27,36 +32,52 @@ body {
 
 .landing {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 0 2px;
     max-height: 800px;
-    overflow: hidden;
-    margin-top: 0px;
+    flex: 1 0 auto;
+    color: white;
+    background-color: #0a0a0a;
   }
 
-  .hero-area {
-    position: absolute;
-    max-width: 800px;
-    margin: 40px 0 0 5%;
-    background-color: rgba(255,255,255,1);
-    z-index: 2;
-    text-align: center;
+.hero-area {
+    margin: 40px 2.5% 0 2.5%;
+    text-align: left;
     text-wrap: wrap;
     padding: 20px 30px 20px 30px;
-    filter: drop-shadow(4px 4px 6px black);
+    max-width: 50%;
+  }
+
+.hero-image {
+    width: 100%;
+    overflow: hidden;
+  }
+
+.hero-image img {
+    width: auto;
   }
 
   .hero-area h1 {
     font-weight: 600;
-    font-size: 50px;
+    font-size: 65px;
     letter-spacing: 1px;
     text-align: left;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 30px;
+    line-height: 65pt;
+  }
+
+#subtitle {
+    margin: 0;
+    font-weight: 600;
+    font-size: 40px;
+    color: #ffffffb5;
+    display: inline-block;
   }
 
   .hero-area p {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 40px;
     font-size: 24px;
     font-weight: 400;
@@ -85,6 +106,7 @@ body {
 .contact-icon {
     height: 55px;
     margin-right: 25px;
+    filter: invert(1);
   }
 
   .contact-text {
@@ -103,29 +125,15 @@ body {
     font-weight: 600;
 }
 
-  /* BACKGROUND COLLAGE */
-  .column {
-    flex: 25%;
-    padding: 0 2px;
-    z-index: -1;
-  }
-  
-  .column img {
-    margin-top: 4px;
-    vertical-align: middle;
-    width: 100%;
-  }
-
 /* FOOTER */
 
 .footer {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 5%;
+  padding: 20px 4.5%;
   background-color: #0a0a0a;
   color: white;
   align-items: center;
-  margin-top: 4px;
 }
 
 .footer-element {
@@ -322,61 +330,23 @@ body {
 
 /* Animation */
 
-.hover::before {  
-  transform: scaleX(0);
-  transform-origin: bottom right;
-}
-
-.hover:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.hover::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  inset: 0 0 0 0;
-  background: hsl(0, 0%, 7%);
-  z-index: -1;
-  transition: transform .3s ease;
-}
-
-.hover:hover {
-  color: white;
-  transition: color .3s ease;
-}
-
-.hover {
+.highlight {
   position: relative;
   min-block-size: 100%;
   min-inline-size: 100%;
-}
-
-html {
-  block-size: 100%;
-  inline-size: 100%;
-}
-
-@media (orientation: landscape) {
-  body {
-    grid-auto-flow: column;
-  }
-}
-
-.fadeIn {
-  animation: fadeInAnimation ease 2s;
+  z-index: 1;
+  animation: highlightAnimation ease-in .5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
-@keyframes fadeInAnimation {
+@keyframes highlightAnimation {
   0% {
-      opacity: 0;
+    color: white;
   }
   100% {
-      opacity: 1;
+    color: #0a0a0a;
+    background-color: white;
   }
 }
 
